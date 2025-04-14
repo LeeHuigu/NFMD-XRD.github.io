@@ -103,7 +103,12 @@
     </p>
 
     <!-- 분석 신청 양식 -->
-    <form action="https://formspree.io/f/xgvadrgn" method="post" id="requestform" enctype="multipart/form-data">
+    <form name="requestform" method="post" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <!-- Honeypot 필드: 사용자가 보이지 않게 처리 -->
+      <input type="hidden" name="bot-field" value="">
+      <!-- 폼 이름(hidden 필드) -->
+      <input type="hidden" name="form-name" value="requestform">
+    
 
       <!-- 이용약관 및 개인정보보호 동의 -->
       <div class="box_basic">
@@ -166,6 +171,15 @@
         <div>
           <label for="email2">이메일</label>
           <input type="text" id="email2" name="email2" required>
+        </div>
+        <div>
+          <label for="company_registration">사업자등록증 사본</label>
+          <div class="filebox">
+            <label for="file">파일 선택</label>
+            <input class="upload-name" value="선택된 파일 없음" readonly>
+            <input type="file" id="file" name="company_registration" required>
+          </div>
+          <span>개인 신청자는 주민등록증 사본을 등록해 주세요.</span>
         </div>
   
         <div>

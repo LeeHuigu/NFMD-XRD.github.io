@@ -161,17 +161,10 @@
           <input type="text" id="person_name" name="person_name" placeholder="이름을 입력하세요." required>
         </div>
         <div>
-          <label for="position">직책</label>
-          <input type="text" id="position" name="position" required>
-        </div>
-        <div>
           <label for="team">소속(기관명)</label>
           <input type="text" id="team" name="team" required>
         </div>
-        <div>
-          <label for="address">주소</label>
-          <input type="text" id="address" name="address" required>
-        </div>
+        
         <div>
           <label for="phone">연락처 (휴대전화)</label>
           <input type="text" id="phone" name="phone" placeholder="010-0000-0000" maxlength="13" class="phone" required>
@@ -180,6 +173,17 @@
           <label for="email">이메일</label>
           <input type="text" id="email" name="email" required>
         </div>
+        <div style="margin-top:16px;">
+        <label for="appointment">예약 날짜 및 시간</label><br>
+        <input 
+          type="datetime-local" 
+          id="appointment" 
+          name="appointment" 
+          required
+          style="padding:6px; font-size:1rem;"
+        >
+        </div>
+        
       </div>
 
       <!-- 2. 세금계산서 발행용 정보 -->
@@ -320,15 +324,7 @@
             <div>
               <label>기판 크기</label>
               <input type="text" name="substrate_size[]" required>
-            </div>
-            <div>
-              <label>시료 처리</label>
-              <input type="text" name="sample_handling[]" placeholder="폐기/반환" required>
-            </div>
-            <div>
-              <label>분석 희망 일자</label>
-              <input type="text" name="etc[]" placeholder="날짜와 시간">
-            </div>
+            </div>    
           </div>
         </div>
         <button type="button" class="add_button">시료 추가</button>

@@ -202,7 +202,7 @@
           <input type="text" id="email" name="email" required>
         </div>
         <div>
-          <label for="reservationDate">예약 날짜</label><br>
+          <label for="reservationDate">예약 날짜</label>
           <input type="text" id="reservationDate" name="reservationDate" required>
         </div>              
      </div>
@@ -268,10 +268,26 @@
         <h3>분석 결과서 옵션</h3>
         <div>
           <label>측정 방식</label>
-          <div class="radio">
-            <label><input type="radio" name="period" value="자율" checked> 자율</label>
-            <input type="text" name="use_blank" id="result_info_input" placeholder="시작 시간">
-            <input type="text" name="use_blank" id="result_info_input" placeholder="종료 시간">
+            <div class="radio" style="display: flex; align-items: center; gap: 16px;">
+            <!-- 자율 라디오 + 입력창 2개 -->
+            <label style="display: flex; align-items: center; gap: 8px;">
+              <input type="radio" name="period" value="자율" checked>
+              자율
+              <!-- 텍스트 입력창 (시작) -->
+              <input 
+                type="text" 
+                name="auto_start" 
+                placeholder="시작" 
+                style="width: 80px; padding:4px; font-size:0.9rem;"
+              >
+              <!-- 텍스트 입력창 (종료) -->
+              <input 
+                type="text" 
+                name="auto_end" 
+                placeholder="종료" 
+                style="width: 80px; padding:4px; font-size:0.9rem;"
+              >
+            </label>
             <label><input type="radio" name="period" value="보통" checked> 보통</label>
             <label><input type="radio" name="period" value="긴급"> 긴급</label>
           </div>

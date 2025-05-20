@@ -68,28 +68,7 @@
     /* 미세 조정이 필요하면 아래 값 조절 */
     transform: translateY(5px);
   }
-  .ref-list {
-      text-align: center;
-      margin-top: 12px;
-    }
-    .ref-list details {
-      display: inline-block;       /* 한 줄에 나란히 */
-      margin: 0 6px;               /* 논문명 사이 간격 */
-    }
-    .ref-list summary {
-      cursor: pointer;
-      color: #007bff;
-      font-size: 0.95rem;
-      list-style: none;            /* 기본 화살표 제거 */
-    }
-    .ref-list img {
-      display: block;
-      max-width: 90%;
-      height: auto;
-      margin: 8px auto 0;          /* 이미지 위에 약간 여백 */
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+  
     .filebox label {
       display: inline-block;
       background-color: #eee;
@@ -168,19 +147,31 @@
     </tr>
   </tbody>
 </table>
-    <!-- …표 끝난 뒤에 넣어주세요… -->
-<div class="ref-list">
-    <details>
-      <summary>https://onlinelibrary.wiley.com/doi/10.1002/smll.202409050</summary>
-      <img src="xrd_ref.PNG" alt="Reference 1">
-    </details>
-    ,
-    <details>
-      <summary> https://doi.org/10.1016/j.apsusc.2021.152086</summary>
-      <img src="xrd_ref2.PNG" alt="Reference 2">
-    </details>
-  </div>
-
+  <details style="text-align: center; margin-top: 12px;">
+  <summary style="
+    cursor: pointer; 
+    font-size: 0.95rem; 
+    color: #007bff; 
+    list-style: none;
+  ">
+    (XRD fitting reference : 
+      <span class="ref-link" data-target="ref1">https://onlinelibrary.wiley.com/doi/10.1002/smll.202409050</span>, 
+      <span class="ref-link" data-target="ref2">https://doi.org/10.1016/j.apsusc.2021.152086</span>
+    )
+  </summary>
+  <div style="display: flex; justify-content: center; gap: 12px; margin-top: 8px;">
+    <img
+      id="ref1"
+      src="xrd_ref.PNG"
+      alt="Reference 1"
+      style="max-width: 45%; height: auto; display: none; border: 1px solid #ccc; border-radius: 4px;"
+    >
+    <img
+      id="ref2"
+      src="xrd_ref2.PNG"
+      alt="Reference 2"
+      style="max-width: 45%; height: auto; display: none; border: 1px solid #ccc; border-radius: 4px;"
+    >
   </div>
 </details>
     </p>

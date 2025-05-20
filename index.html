@@ -50,6 +50,28 @@
       border-radius: 3px;
       box-sizing: border-box;
     }
+     /* 요약(summary) 부분을 클릭 커서로 표시 */
+  details summary {
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #007bff;
+    margin-bottom: 8px;
+    list-style: none;  /* 기본 화살표 제거 */
+  }
+  /* 펼쳐진 이미지 스타일 */
+  details img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 4px auto 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  /* details 간 간격 */
+  .ref-section {
+    text-align: center;
+    margin-top: 12px;
+  }
     .radio {
     display: flex;
     align-items: center;    /* 자율(라디오)와 입력창을 수직 가운데 정렬 */
@@ -148,27 +170,20 @@
   </tbody>
 </table>
 <!-- XRD fitting reference 1 -->
-      <div style="text-align: center; margin-top: 12px;">
-        <p style="font-size: 0.95rem; color: #333;">
-          XRD fitting reference1: <strong>https://onlinelibrary.wiley.com/doi/10.1002/smll.202409050</strong>
-        </p>
-        <img
-          src="xrd_ref1.PNG"
-          alt="Reference 1"
-          style="max-width: 90%; height: auto; border: 1px solid #ccc; border-radius: 4px;"
-        >
+      <!-- Reference 1 -->
+      <div class="ref-section">
+        <details>
+          <summary>XRD fitting reference1: https://onlinelibrary.wiley.com/doi/10.1002/smll.202409050</summary>
+          <img src="xrd_ref.PNG" alt="Reference 1">
+        </details>
       </div>
       
-      <!-- XRD fitting reference 2 -->
-      <div style="text-align: center; margin-top: 12px;">
-        <p style="font-size: 0.95rem; color: #333;">
-          XRD fitting reference2: <strong>https://doi.org/10.1016/j.apsusc.2021.152086</strong>
-        </p>
-        <img
-          src="xrd_ref2.PNG"
-          alt="Reference 2"
-          style="max-width: 90%; height: auto; border: 1px solid #ccc; border-radius: 4px;"
-        >
+      <!-- Reference 2 -->
+      <div class="ref-section">
+        <details>
+          <summary>XRD fitting reference2: https://doi.org/10.1016/j.apsusc.2021.152086</summary>
+          <img src="xrd_ref2.png" alt="Reference 2">
+        </details>
       </div>
     
   </div>

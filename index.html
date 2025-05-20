@@ -51,13 +51,23 @@
       box-sizing: border-box;
     }
     .radio {
-      margin-bottom: 10px;
-    }
-    .radio label {
-      font-weight: normal;
-      display: inline-block;
-      margin-right: 20px;
-    }
+    display: flex;
+    align-items: center;    /* 자율(라디오)와 입력창을 수직 가운데 정렬 */
+    gap: 16px;
+  }
+  .radio label {
+    display: flex;
+    align-items: center;    /* 라벨 안의 요소들도 가운데 정렬 */
+    gap: 8px;
+  }
+  .radio input[type="text"] {
+    width: 80px;
+    padding: 4px;
+    font-size: 0.9rem;
+    vertical-align: middle; /* 인라인 요소 수직 정렬 보조 */
+    /* 미세 조정이 필요하면 아래 값 조절 */
+    transform: translateY(2px);
+  }
     .filebox label {
       display: inline-block;
       background-color: #eee;
@@ -89,31 +99,7 @@
       font-size: 0.9em;
       color: #777;
     }
-    .time-range {
-    display: flex;
-    align-items: center;
-    gap: 8px;            /* 항목들 사이 간격 */
-    margin-top: 16px;
-  }
-  .time-range .picker {
-    display: flex;
-    flex-direction: column;
-    flex: 1;             /* 가변 너비 조정 가능 */
-  }
-  .time-range .picker label {
-    margin-bottom: 4px;
-    font-weight: 500;
-  }
-  .time-range .picker input {
-    width: 120px;
-    padding: 6px;
-    font-size: 1rem;
-  }
-  .time-range .tilde {
-    font-size: 1.5rem;
-    line-height: 1;
-    transform: translateY(3px);
-  }
+   
   </style>
   <!-- jQuery (필요한 스크립트 기능을 위해) -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -121,7 +107,7 @@
 <body>
   <div class="container">
     <!-- 페이지 제목 및 안내 문구 -->
-    <h1>분석 신청</h1>
+    <h1>NFMD LAB XRD 분석 신청</h1>
     <p>
       분석료는 다음과 같습니다. 
       <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%; text-align: center;">
@@ -268,25 +254,12 @@
         <h3>분석 결과서 옵션</h3>
         <div>
           <label>측정 방식</label>
-            <div class="radio" style="display: flex; align-items: center; gap: 16px;">
-            <!-- 자율 라디오 + 입력창 2개 -->
-            <label style="display: flex; align-items: center; gap: 8px;">
+          <div class="radio">
+            <label>
               <input type="radio" name="period" value="자율" checked>
               자율
-              <!-- 텍스트 입력창 (시작) -->
-              <input 
-                type="text" 
-                name="auto_start" 
-                placeholder="시작" 
-                style="width: 80px; padding:4px; font-size:0.9rem;"
-              >
-              <!-- 텍스트 입력창 (종료) -->
-              <input 
-                type="text" 
-                name="auto_end" 
-                placeholder="종료" 
-                style="width: 80px; padding:4px; font-size:0.9rem;"
-              >
+              <input type="text" name="auto_start" placeholder="시작">
+              <input type="text" name="auto_end"   placeholder="종료">
             </label>
             <label><input type="radio" name="period" value="보통" checked> 보통</label>
             <label><input type="radio" name="period" value="긴급"> 긴급</label>

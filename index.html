@@ -164,7 +164,10 @@
           <label for="team">소속(기관명)</label>
           <input type="text" id="team" name="team" required>
         </div>
-        
+        <div>
+          <label for="address">주소</label>
+          <input type="text" id="address" name="address" required>
+        </div>
         <div>
           <label for="phone">연락처 (휴대전화)</label>
           <input type="text" id="phone" name="phone" placeholder="010-0000-0000" maxlength="13" class="phone" required>
@@ -173,17 +176,39 @@
           <label for="email">이메일</label>
           <input type="text" id="email" name="email" required>
         </div>
-        <div style="margin-top:16px;">
-        <label for="appointment">예약 날짜 및 시간</label><br>
+            
+        <div style="margin-top: 16px;">
+          <label for="reservationDate">예약 날짜</label><br>
+          <input 
+            type="date" 
+            id="reservationDate" 
+            name="reservationDate" 
+            required
+            style="padding:6px; font-size:1rem;"
+          >
+        </div>
+        <div style="margin-top: 16px;">
+        <label for="startTime">시작 시간</label><br>
         <input 
-          type="datetime-local" 
-          id="appointment" 
-          name="appointment" 
+          type="time" 
+          id="startTime" 
+          name="startTime"  
           required
           style="padding:6px; font-size:1rem;"
         >
-        </div>
-        
+      </div>
+      
+      <!-- 종료 시간 (예: 09:00 ~ 18:00 허용) -->
+      <div style="margin-top: 16px;">
+        <label for="endTime">종료 시간</label><br>
+        <input 
+          type="time" 
+          id="endTime" 
+          name="endTime"  
+          required
+          style="padding:6px; font-size:1rem;"
+        >
+      </div>
       </div>
 
       <!-- 2. 세금계산서 발행용 정보 -->

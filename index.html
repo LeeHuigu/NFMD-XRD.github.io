@@ -197,9 +197,12 @@
           style="padding:6px; font-size:1rem;"
         >
       </div>
-      
+      <div 
+        class="tilde" 
+        style="font-size:1.5rem; line-height:1; padding-bottom: 6px;"
+      >~</div>
       <!-- 종료 시간 (예: 09:00 ~ 18:00 허용) -->
-      <div style="margin-top: 16px;">
+      <div class="time-picker" style="display: flex; flex-direction: column;">
         <label for="endTime">종료 시간</label><br>
         <input 
           type="time" 
@@ -209,7 +212,7 @@
           style="padding:6px; font-size:1rem;"
         >
       </div>
-      </div>
+     </div>
 
       <!-- 2. 세금계산서 발행용 정보 -->
       <div class="box_basic">
@@ -332,11 +335,7 @@
             </div>
             <div>
               <label>시료 종류</label>
-              <input type="text" name="sample_type[]" placeholder="유기물/무기물/합성물 등" required>
-            </div>
-            <div>
-              <label>시료 상태</label>
-              <input type="text" name="sample_status[]" placeholder="고체/파우더/액상/겔/박막/플레이크 등" required>
+              <input type="text" name="sample_type[]" placeholder="박막, 파우더" required>
             </div>
             <div>
               <label>시료 개수</label>

@@ -416,6 +416,17 @@
         return (key == 8 || key == 9 || key == 46 ||
                 (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
       });
+       // 논문이름 클릭 시 해당 이미지 토글
+  document.querySelectorAll('.ref-link').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation(); // summary 토글이 트리거되지 않도록 방지
+      const tgt = e.target.dataset.target;
+      document.getElementById('ref1').style.display = (tgt === 'ref' ? 'inline-block' : 'none');
+      document.getElementById('ref2').style.display = (tgt === 'ref2' ? 'inline-block' : 'none');
+    });
+  });
 
       // 파일 선택시 파일명 표시
       $('#file').on('change', function(){

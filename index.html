@@ -187,31 +187,39 @@
             style="padding:6px; font-size:1rem;"
           >
         </div>
+              <!-- 시작 시간 -->
         <div class="time-picker" style="display: flex; flex-direction: column;">
-        <label for="startTime">시작 시간</label><br>
-        <input 
-          type="time" 
-          id="startTime" 
-          name="startTime"  
-          required
-          style="padding:6px; font-size:1rem;"
-        >
-      </div>
-      <div 
-        class="tilde" 
-        style="font-size:1.5rem; line-height:1; padding-bottom: 6px;"
-      >~</div>
+          <label for="startTime">시작 시간</label>
+          <input 
+            type="time" 
+            id="startTime" 
+            name="startTime" 
+            min="09:00" 
+            max="18:00" 
+            required
+            style="padding:6px; font-size:1rem;"
+          >
+        </div>
       
-      <div class="time-picker" style="display: flex; flex-direction: column;">
-        <label for="endTime">종료 시간</label><br>
-        <input 
-          type="time" 
-          id="endTime" 
-          name="endTime"  
-          required
-          style="padding:6px; font-size:1rem;"
-        >
-      </div>
+        <!-- 물결표시 -->
+        <div 
+          class="tilde" 
+          style="font-size:1.5rem; line-height:1; padding-bottom: 6px;"
+        >~</div>
+      
+        <!-- 종료 시간 -->
+        <div class="time-picker" style="display: flex; flex-direction: column;">
+          <label for="endTime">종료 시간</label>
+          <input 
+            type="time" 
+            id="endTime" 
+            name="endTime" 
+            min="09:00" 
+            max="18:00" 
+            required
+            style="padding:6px; font-size:1rem;"
+          >
+        </div>
      </div>
 
       <!-- 2. 세금계산서 발행용 정보 -->

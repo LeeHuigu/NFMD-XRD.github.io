@@ -50,28 +50,26 @@
       border-radius: 3px;
       box-sizing: border-box;
     }
-     /* 요약(summary) 부분을 클릭 커서로 표시 */
-  details summary {
+    .ref-section {
+    /* 요약 텍스트는 왼쪽 정렬, 이미지 만 센터 */
+    text-align: left;
+    margin-top: 12px;
+  }
+  .ref-section details summary {
     cursor: pointer;
     font-size: 0.95rem;
     color: #007bff;
-    margin-bottom: 8px;
-    list-style: none;  /* 기본 화살표 제거 */
+    list-style: none;     /* 불릿 제거 */
+    /* summary 는 block 요소이므로 text-align 없이도 왼쪽 정렬 */
   }
-  /* 펼쳐진 이미지 스타일 */
-  details img {
+  .ref-section details img {
     display: block;
     max-width: 90%;
     height: auto;
-    margin: 4px auto 0;
+    margin: 8px auto 0;    /* 상단 여백 8px, 좌우 자동(margin:0 auto)으로 가운데 정렬 */
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  /* details 간 간격 */
-  .ref-section {
-    text-align: center;
-    margin-top: 12px;
-  }
+  } 
     .radio {
     display: flex;
     align-items: center;    /* 자율(라디오)와 입력창을 수직 가운데 정렬 */

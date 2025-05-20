@@ -89,6 +89,29 @@
       font-size: 0.9em;
       color: #777;
     }
+    .time-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;            /* 항목들 사이 간격 */
+    margin-top: 16px;
+  }
+  .time-range .picker {
+    display: flex;
+    flex-direction: column;
+    flex: 1;             /* 가변 너비 조정 가능 */
+  }
+  .time-range .picker label {
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .time-range .picker input {
+    padding: 6px;
+    font-size: 1rem;
+  }
+  .time-range .tilde {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
   </style>
   <!-- jQuery (필요한 스크립트 기능을 위해) -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

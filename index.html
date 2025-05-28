@@ -487,7 +487,8 @@
             <button type="button" class="delete" onclick="$(this).parent().remove();">삭제</button>
           </div>`;
         // 시료 추가 박스는 컨테이너에 후단에 추가합니다.
-        $(this).closest('.container').append(sampleHTML);
+        - $(this).closest('.container').append(sampleHTML);
+        + $(this).closest('.box_basic').after(sampleHTML);
       });
     });
   </script>

@@ -314,7 +314,7 @@
               <input type="text" name="auto_end"   placeholder="종료">
             </label>
             <label><input type="radio" name="period" value="측정 의뢰" checked> 측정 의뢰</label>
-            <label><input type="radio" name="period" value=""> Rietveld refinement </label>
+            <label><input type="radio" name="period" value="Rietveld refinement"> Rietveld refinement </label>
           </div>
         </div>
         <div>
@@ -458,39 +458,32 @@
           <div class="box_basic sample">
             <h3>시료 정보 (추가)</h3>
             <div class="table_information">
-              <div>
-                <label>시료명</label>
-                <input type="text" name="sample_name[]" required>
-              </div>
-              <div>
-                <label>시료 종류</label>
-                <input type="text" name="sample_type[]" placeholder="유기물/무기물/합성물 등" required>
-              </div>
-              <div>
-                <label>시료 상태</label>
-                <input type="text" name="sample_status[]" placeholder="고체/파우더/액상/겔/박막/플레이크 등" required>
-              </div>
-              <div>
-                <label>시료 개수</label>
-                <input type="text" name="sample_count[]" required>
-              </div>
-              <div>
-                <label>기판 종류</label>
-                <input type="text" name="substrate_type[]" required>
-              </div>
-              <div>
-                <label>기판 크기</label>
-                <input type="text" name="substrate_size[]" required>
-              </div>
-              <div>
-                <label>시료 처리</label>
-                <input type="text" name="sample_handling[]" placeholder="폐기/반환" required>
-              </div>
-              <div>
-                <label>분석 희망 일자</label>
-                <input type="text" name="etc[]" placeholder="날짜와 시간">
-              </div>
+             <h3>시료 정보</h3>
+        <div class="table_information">
+          <div class="sample_box">
+            <div>
+              <label>시료명</label>
+              <input type="text" name="sample_name[]" required>
             </div>
+            <div>
+              <label>시료 종류</label>
+              <input type="text" name="sample_type[]" placeholder="박막, 파우더" required>
+            </div>
+            <div>
+              <label>시료 개수</label>
+              <input type="text" name="sample_count[]" required>
+            </div>
+            <div>
+              <label>기판 종류</label>
+              <input type="text" name="substrate_type[]" required>
+            </div>
+            <div>
+              <label>기판 크기</label>
+              <input type="text" name="substrate_size[]" required>
+            </div>    
+          </div>
+        </div>
+        <button type="button" class="add_button">시료 추가</button>
             <button type="button" class="delete" onclick="$(this).parent().remove();">삭제</button>
           </div>`;
         // 시료 추가 박스는 컨테이너에 후단에 추가합니다.

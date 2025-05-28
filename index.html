@@ -453,7 +453,7 @@
       });
 
       // 시료 추가 버튼: 기존 시료 박스 복제 후 추가
-      $('.add_button').on('click', function(){
+      $('.container').on('click', '.add_button', function(){
         var sampleHTML = `
           <div class="box_basic sample">
             <h3>시료 정보 (추가)</h3>

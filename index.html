@@ -130,7 +130,7 @@
     <!-- 페이지 제목 및 안내 문구 -->
     <h1>NFMD XRD 분석 신청</h1>
     <p>
-      분석료 ( *부가세는 별도 입니다.)
+      분석료 ( *부가세는 별도 입니다./ XRD 자율 측정 가격은 operator 자격 여부에 따라 변동 가능합니다.)
       <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%; text-align: center; font-weight: bold; ">
   <thead>
     <tr style="background-color: #f0f0f0;">
@@ -259,7 +259,7 @@
           
         </div>
         <div>
-          <label for="manager">담당자</label>
+          <label for="manager">담당자(교수님 성함을 입력해주세요.)</label>
           <input type="text" id="manager" name="manager" required>
         </div>
         <div>
@@ -353,12 +353,20 @@
           </div>
         </div>
         <div>
+          <label>Operator 자격 여부 확인(이전에 한번이라도 사용하셨으면, 없음해주시면 됩니다.)</label>
+          <div class="radio">
+            <label><input type="radio" name="operator" value="있음" checked> 있음 </label>
+            <label><input type="radio" name="operator" value="없음" checked> 없음 (추가 비용: 그룹 당 20만원) </label>
+          </div>
+        </div>
+        <div>
           <label>부가 서비스</label>
           <div class="radio">
             <label><input type="radio" name="service" value="Raw Data" checked> 없음 </label>
             <label><input type="radio" name="service" value="crystal identification" checked> crystal identification (추가 비용: 1만원) </label>
           </div>
         </div>
+        
       </div>
 
       <!-- 4. 시료 정보 -->

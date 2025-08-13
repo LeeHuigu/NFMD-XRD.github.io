@@ -142,12 +142,6 @@
   </thead>
   <tbody>
     <tr>
-      <td>Self - XRD(자율 측정)</td>
-      <td>시간 당</td>
-      <td>15,000</td>
-      <td>15,000</td>
-    </tr>
-    <tr>
       <td>XRD</td>
       <td>샘플 당</td>
       <td>40,000</td>
@@ -307,12 +301,6 @@
         <div>
           <label>측정 방식</label>
           <div class="radio">
-            <label>
-              <input type="radio" name="period" value="자율" checked>
-              자율
-              <input type="text" name="auto_start" placeholder="시작">
-              <input type="text" name="auto_end"   placeholder="종료">
-            </label>
             <label><input type="radio" name="period" value="측정 의뢰" checked> 측정 의뢰</label>
             <label><input type="radio" name="period" value="Rietveld refinement"> Rietveld refinement </label>
           </div>
@@ -336,7 +324,6 @@
         <div>
           <label>분석결과서 분할</label>
           <div class="radio">
-            <label><input type="radio" name="division" value="자율" checked> 자율 </label>
             <label><input type="radio" name="division" value="샘플별 분할"> 샘플별 분할</label>
             <label><input type="radio" name="division" value="통합"> 통합</label>
           </div>
@@ -350,13 +337,6 @@
               <input type="radio" name="use" value="기타" id="result_use"> 기타  
               <input type="text" name="use_blank" id="result_info_input" placeholder="용도 입력">
             </label>
-          </div>
-        </div>
-        <div>
-          <label>Operator 자격 여부 확인 (이전에 한번이라도 사용하셨으면, 없음해주시면 됩니다.)</label>
-          <div class="radio">
-            <label><input type="radio" name="operator" value="있음" checked> 있음 </label>
-            <label><input type="radio" name="operator" value="없음" checked> 없음 (추가 비용: 그룹 당 20만원) </label>
           </div>
         </div>
         <div>
@@ -416,7 +396,7 @@
       <div class="box_basic">
         <h3>분석 내용</h3>
         <div>
-          <label for="analysismemo">분석 내용 작성 (자율 측정 신청자는 없음이라고 기입)</label>
+          <label for="analysismemo">분석 내용 작성</label>
           <textarea name="analysismemo" id="analysismemo" rows="5" placeholder="원하시는 분석 내용을 작성하세요."></textarea>
         </div>
       </div>
@@ -502,3 +482,4 @@
   </script>
 </body>
 </html>
+
